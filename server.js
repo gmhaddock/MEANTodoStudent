@@ -9,8 +9,7 @@ var Schema = mongoose.Schema;
 // --------------------
 var todoSchema = new Schema({
   title: String,
-  body: String,
-  completed: Boolean
+  body: String
 });
 
 var Todo = mongoose.model("Todo", todoSchema);
@@ -52,8 +51,7 @@ server.get("/api/todos", function(req, res){
 server.post("/api/todos", function(req, res){
   var todo = new Todo({
     title: req.body.title,
-    body: req.body.body,
-    completed: req.body.completed
+    body: req.body.body
   });
 
   todo.save(function(err){

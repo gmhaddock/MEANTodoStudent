@@ -1,1 +1,9 @@
-list
+<h3>Things you need to do....</h3>
+<div class = "row" ng-repeat="todo in todos">
+    <div class="well">
+      <h4>{{ todo.title }}</h4>
+      <p> {{ todo.body }}</p>
+      <span data-id="{{todo._id}}"></span>
+    </div>
+    <button type="button" class="btn btn-danger" ng-click="deleteTodo(todo._id)">X</button>
+</div>
