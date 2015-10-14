@@ -1,1 +1,14 @@
-create
+<h3>Create a todo...</h3>
+
+<form ng-submit="createTodo()">
+  <div class="form-group">
+    <label>Title:</label>
+    <input type="text" class="form-control" ng-model="formData.title">
+  </div>
+  <div class="form-group">
+    <label>Body:</label>
+    <textarea class="form-control" ng-model="formData.body"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-default">Create</button>
+</form>

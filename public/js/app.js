@@ -6,10 +6,12 @@ app.config(function($routeProvider){
     templateUrl: "html/home.html"
   })
   .when("/list", {
-    templateUrl: "html/list.html"
+    templateUrl: "html/list.html",
+    controller: "TodoListController"
   })
   .when("/create",{
-    templateUrl: "html/create.html"
+    templateUrl: "html/create.html",
+    controller: "TodoCreateController"
   })
   .otherwise({
     redirectTo: "/home"
